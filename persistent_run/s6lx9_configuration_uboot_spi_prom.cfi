@@ -1,0 +1,12 @@
+# PROMGEN: Xilinx Prom Generator O.61xd
+# Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION O.61xd
+DATE            09/01/2011 - 22:22
+SOURCE          C:\My_Projects\S6LX9\PetaLinux\Software_302\ready_for_download\S6LX9_configuration_uboot.mcs
+DEVICE          16384K
+DATA_WIDTH      1
+FILL_DATA       0xFF
+SIGNATURE       0xF874E041
+START_ADDRESS   0x00000000 END_ADDRESS 0x0005327B DIRECTION_UP   "C:/My_Projects/S6LX9/PetaLinux/Software_302/AvtS6LX9MicroBoard_SW302_PetaLinux_13_1_02/ready_for_download/download_cclktemp.bit" 6slx9csg324
+START_ADDRESS   0x00060000 END_ADDRESS 0x0009198F DIRECTION_UP   "C:/My_Projects/S6LX9/PetaLinux/hardware/reference-designs/Avnet-S6LX9-AXI-tiny-13.1/pre-built/images/u-boot-s.bin" DATAFILE

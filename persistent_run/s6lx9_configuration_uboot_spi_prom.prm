@@ -1,0 +1,18 @@
+PROMGEN: Xilinx Prom Generator O.61xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o C:\My_Projects\S6LX9\PetaLinux\Software_302\ready_for_download//S6LX9_configuration_uboot.mcs -s 16384 -u 0000 C:/My_Projects/S6LX9/PetaLinux/Software_302/AvtS6LX9MicroBoard_SW302_PetaLinux_13_1_02/ready_for_download/download_cclktemp.bit -data_file up 60000 C:/My_Projects/S6LX9/PetaLinux/hardware/reference-designs/Avnet-S6LX9-AXI-tiny-13.1/pre-built/images/u-boot-s.bin -spi 
+
+PROM C:\My_Projects\S6LX9\PetaLinux\Software_302\ready_for_download\S6LX9_configuration_uboot.prm map: Thu Sep 01 22:22:35 2011
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          16384K
+PROM start    0000:0000
+PROM end      00ff:ffff
+PROM checksum f874e041
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0005:327b     Sep 01 22:05:19 2011 C:/My_Projects/S6LX9/PetaLinux/Software_302/AvtS6LX9MicroBoard_SW302_PetaLinux_13_1_02/ready_for_download/download_cclktemp.bit
+    0006:0000    0009:198f     Jun 17 01:28:58 2011 C:/My_Projects/S6LX9/PetaLinux/hardware/reference-designs/Avnet-S6LX9-AXI-tiny-13.1/pre-built/images/u-boot-s.bin
