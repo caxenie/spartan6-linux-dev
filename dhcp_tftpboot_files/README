@@ -1,0 +1,71 @@
+Spartan6-LX9 MICROBoard Getting started with Linux Embedded - DHCP & TFTPBoot setup 
+
+In order to boot the system (the kernel) from the host machine one will need to install a dhcp server and configure it for tftpboot.
+Depending on the distribution of the host development machine one can choose the proper packages but the configuration should be similar.
+The file attached in the current directory contains the dhcpd configuration file and the tftpboot directory (with user access rights found in / of the host machine fs).
+
+After booting the kernel one can login to the embedded board using telnet.
+
+Avnet-LX9-Microboard-AXI-tiny-13.1 login: root
+Password: root
+
+Linux version 2.6.37.4-00531-g2db5587 (jwu@jwu-desktop) (gcc version 4.1.2) #2 Mon Jun 20 16:34:00 EST 2011setup_cpuinfo: initialisingsetup_cpuinfo: No PVR support. Using static CPU info from FDTcache: wt_msr_noirqsetup_memory: max_mapnr: 0x4000setup_memory: min_low_pfn: 0x80000setup_memory: max_low_pfn: 0x84000On node 0 totalpages: 16384free_area_init_node: node 0, pgdat c02c05d4, node_mem_map c09f5000  Normal zone: 128 pages used for memmap  Normal zone: 0 pages reserved  Normal zone: 16256 pages, LIFO batch:3pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768pcpu-alloc: [0] 0 Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16256Kernel command line:  console=ttyUL0,115200 PID hash table entries: 256 (order: -2, 1024 bytes)Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)Memory: 54668k/65536k available
+NR_IRQS:32
+xlnx,xps-intc-1.00.a #0 at 0xc4000000, num_irq=4, edge=0xd
+xlnx,xps-timer-1.00.a #0 at 0xc4004000, irq=0
+microblaze_timer_set_mode: shutdown
+microblaze_timer_set_mode: periodic
+Calibrating delay loop... 31.68 BogoMIPS (lpj=63360)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+NET: Registered protocol family 16
+bio: create slab <bio-0> at 0
+Switching to clocksource microblaze_clocksource
+microblaze_timer_set_mode: oneshot
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 2048 (order: 2, 16384 bytes)
+TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+TCP: Hash tables configured (established 2048 bind 2048)
+TCP reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Skipping unavailable RESET gpio -2 (reset)
+GPIO pin is already allocated
+JFFS2 version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+msgmni has been set to 106
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 254)
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+40600000.serial: ttyUL0 at MMIO 0x40600000 (irq = 3) is a uartlite
+console [ttyUL0] enabled
+Xilinx SystemACE device driver, major=254
+m25p80 spi32766.0: found n25q128, expected m25p80
+m25p80 spi32766.0: n25q128 (16384 Kbytes)
+Creating 6 MTD partitions on "spi32766.0":
+0x000000000000-0x000000060000 : "fpga"
+0x000000060000-0x0000000a0000 : "boot"
+0x0000000a0000-0x0000000c0000 : "bootenv"
+0x0000000c0000-0x0000000e0000 : "config"
+0x0000000e0000-0x000000ae0000 : "image"
+0x000000ae0000-0x000001000000 : "spare"
+xilinx_spi 40a00000.spi: at 0x40A00000 mapped to 0xc4060000, irq=1
+of:xilinx_emaclite 40e00000.ethernet: Device Tree Probing
+of:xilinx_emaclite 40e00000.ethernet: error registering MDIO bus
+of:xilinx_emaclite 40e00000.ethernet: MAC address is now 00:0a:35:00:63:37
+of:xilinx_emaclite 40e00000.ethernet: Xilinx EmacLite at 0x40E00000 mapped to 0xC4080000, irq=2
+TCP cubic registered
+NET: Registered protocol family 17
+Freeing unused kernel memory: 7296k freed
+
+
+There is also a web server configured and running on the board. To access it one can use the following link in the browser:
+
+    http://192.168.1.28/cgi-bin/petalinux/overview
+

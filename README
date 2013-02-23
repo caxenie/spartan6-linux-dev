@@ -36,4 +36,4 @@ PetaLogix Linux --> PetaLinux + uBoot
  A nice application found in the Linux rootfs is a webserver with configuration capabilities.	
 	http://<board_ip_address>:80
 
-	e.g.:	http://192.168.1.18:80/cgi-bin/petalinux/overvieew
+	e.g.:	http://192.168.1.28:80/cgi-bin/petalinux/overview
