@@ -1,6 +1,9 @@
 Spartan6-LX9 MICROBoard Getting started with Linux Embedded - DHCP & TFTPBoot setup 
 
 In order to boot the system (the kernel) from the host machine one will need to install a dhcp server and configure it for tftpboot.
+For Ubuntu:
+https://help.ubuntu.com/8.04/installation-guide/i386/install-tftp.html
+
 Depending on the distribution of the host development machine one can choose the proper packages but the configuration should be similar.
 The file attached in the current directory contains the dhcpd configuration file and the tftpboot directory (with user access rights found in / of the host machine fs).
 
